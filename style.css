@@ -1,0 +1,52 @@
+body {
+    background: url("assets/board.jpg");
+}
+main {
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    background: url("assets/background.jpg") no-repeat center center fixed;
+}
+.board {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    border-collapse: collapse;
+}
+.square {
+    border: 2px solid #673308;
+    border-right: 0;
+    width: 90px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.square:nth-child(5n) {
+    border-right: 2px solid #673308;
+}
+.square-step {
+    background-color: rgba(255, 255, 0, 0.2);
+    cursor: pointer;
+}
+.token {
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+}
+.token-active {
+    border: 2px yellow dashed;
+}
+.token-red {
+    background-color: #661a1a;
+}
+.token-green {
+    background-color: #0f3a0f;
+}
+.token-yellow {
+    background-color: #c1aa31;
+}
